@@ -1,0 +1,25 @@
+.backCart {
+  width: 100vw;
+  height: 80vh;
+  position: fixed;
+   background-color: rgba(0, 0, 0, .7); 
+   background-color: #23252B; 
+  padding-top: 5rem;
+  color: white;
+   display: none;   
+}
+.Cart {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  
+}
+.closeCart {
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  font-weight: 900;
+  font-size: 2rem;
+  color: black;
+}

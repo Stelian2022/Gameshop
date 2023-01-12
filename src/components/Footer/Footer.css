@@ -1,0 +1,13 @@
+.reseaux{
+    display: flex;
+    flex-direction: row;
+    
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    justify-content: center;
+}
+.reseaux i{
+    padding: 1rem;
+    
+}

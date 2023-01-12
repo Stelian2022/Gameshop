@@ -1,0 +1,34 @@
+.cardFrame {
+  padding-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  
+  text-align: center;
+
+}
+.cardFrame img{
+  height: 60%;
+}
+.cardFrame > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #23252B;
+  border: solid 1px;
+  width: 50%;
+  color: white;
+}
+.cardFrame button{
+  width: 100%;
+  height: 2rem;
+  background-color: #9F1600;
+  color: orange;
+  font-weight: 900;
+}
+
+
+@media screen and (min-width: 576px) {
+  .cardFrame > div {
+    width: 25%;
+  }
+}

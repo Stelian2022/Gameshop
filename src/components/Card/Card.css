@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .cardFrame img {
+    width: 100%;
+  }
+  .cardFrame>div{
+      width: 40%;
+  }
+  .prix{
+      font-size: 1.5rem;
+      
+  }
