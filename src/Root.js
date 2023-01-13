@@ -6,6 +6,7 @@ import "./Root.css";
 import articles from "./articles";
 import Cart from "./components/Cart/Cart";
 import Reseaux from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact";
 
 //Component de type class simple
 class Root extends React.Component {
@@ -26,11 +27,13 @@ class Root extends React.Component {
 
         <main>
           <CardFrame data={this.state.data}></CardFrame>
+          <div>
+            <Contact></Contact>
+          </div>
         </main>
+
         <footer>
-          <Reseaux>
-            
-          </Reseaux>
+          <Reseaux></Reseaux>
         </footer>
       </div>
     );
