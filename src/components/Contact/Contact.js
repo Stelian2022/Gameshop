@@ -1,5 +1,9 @@
 import "./Contact.css";
+import BoutiqueContext from "../../BoutiqueContext";
+import React from "react";
+
 const Contact = (props) => {
+  const boutiqueContext = React.useContext(BoutiqueContext);
   return (
     <div className="contactWindow">
       <div className="contactForm">

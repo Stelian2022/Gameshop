@@ -1,5 +1,8 @@
 import MenuButton from "./MenuButton";
 import "./Menu.css";
+import React from "react";
+import BoutiqueContext from "../../BoutiqueContext";
+
 //creer une class menuEntries qui va générer les objets
 //de mon menuComponent ci-desus :
 class MenuEntries {
@@ -17,7 +20,14 @@ const menuContent = [
   new MenuEntries("Cart", "#"),
   new MenuEntries("Contact", "#"),
 ];
-console.dir(menuContent);
+class MenuInscription {
+  constructor(text, url) {
+    this.text = text;
+    this.url = url;
+  }
+}
+const MenuInscriptionContent = [new MenuInscription("Sipn Up/Log In", "#")];
+
 
 // const menuContent = [
 //   {
@@ -39,7 +49,9 @@ function displayMenu() {
   document.querySelector(".burger i").classList.toggle("fa-bars");
   document.querySelector(".burger i").classList.toggle("fa-xmark");
 }
-function Menu() {
+
+function Menu(props) {
+  const boutiqueContext = React.useContext(BoutiqueContext);
   return (
     <div className="menuHeader">
       <div className="logo">GAME SHOP</div>
@@ -47,27 +59,51 @@ function Menu() {
         {
           /*pour appeler une boucle dans mon JSX je dois utiliser des accolades*/
           menuContent.map((value) => {
-            console.dir(value);
+           
             //pour retourner a nouveau du JSX je doit dans ma function callback
             //utiliser un return
-            return <MenuButton texte={value.text} url={value.url}></MenuButton>;
+            return (
+              <MenuButton
+                clickDisplayFrame={props.clickDisplayFrame}
+                texte={value.text}
+                url={value.url}
+              ></MenuButton>
+            );
           })
         }
       </ul>
       {/* Attention dans un event l'utilisation de paratheses a la suite 
       de ma fonction appelle cette fonction a l'ouverture du document.
       Il faudra donc les retirer. */}
-<div className="menuCart">
-<div className="burger" onClick={displayMenu}>
-        <i className="fa-solid fa-bars"></i>
-       
+      <div className="menuCart">
+        <div className="inscription">
+          {
+            /*pour appeler une boucle dans mon JSX je dois utiliser des accolades*/
+            MenuInscriptionContent.map((value) => {
+              
+              //pour retourner a nouveau du JSX je doit dans ma function callback
+              //utiliser un return
+              return (
+                <MenuButton
+                  clickDisplayFrame={props.clickDisplayFrame}
+                  texte={value.text}
+                  url={value.url}
+                ></MenuButton>
+              );
+            })
+          }
+        </div>
+        <div className="burger" onClick={displayMenu}>
+          <i className="fa-solid fa-bars"></i>
+        </div>
+
+        <i
+          className="fa-solid fa-cart-shopping"
+          onClick={() => {
+            boutiqueContext.handleDisplayFrame(props.texte);
+          }}
+        ></i>
       </div>
-      <i class="fa-solid fa-cart-shopping"></i>
-
-</div>
-
-      
-     
     </div>
   );
 }

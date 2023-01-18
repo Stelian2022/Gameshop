@@ -1,9 +1,9 @@
- import './Card.css';
+import "./Card.css";
+import BoutiqueContext from "../../BoutiqueContext";
+import React from "react";
 function CardButton(props) {
-    return (
-      <button>
-        Buy <span>{props.qteCard}</span>
-      </button>
-    );
-  }
- export default CardButton;
+  
+  const boutiqueContext = React.useContext(BoutiqueContext);
+  return <button onClick={() => boutiqueContext.achat(props.id)}>Buy</button>;
+}
+export default CardButton;

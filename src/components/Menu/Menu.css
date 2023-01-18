@@ -48,8 +48,15 @@
 .innerMenu a:hover {
   color: green;
 }
-
-
+.inscription{
+  list-style-type: none;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 1rem;
+}
+.inscription a:visited {
+  color: black;
+}
 
 .menuHeader {
   display: flex;

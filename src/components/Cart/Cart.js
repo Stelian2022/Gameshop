@@ -1,9 +1,15 @@
+import BoutiqueContext from '../../BoutiqueContext';
+import React from 'react';
 import './Cart.css';
 const Cart = (props) => {
+  const boutiqueContext=React.useContext(BoutiqueContext);
   return (
     <div className="backCart">
       <div className="cart">
-        <div className="closeCart ">
+        <div className="closeCart " onClick={()=>
+        {
+          boutiqueContext.handleDisplayFrame("Cart");
+        }}>
           X
           </div>
           
@@ -18,7 +24,7 @@ const Cart = (props) => {
               <span className="lessCart">-</span>
               <span className="peiceCart">{}</span>
               <span className="removeCart">
-                <i class="fa-solid fa-trash-can"></i>
+                <i className="fa-solid fa-trash-can"></i>
               </span>
             </span>
           </li>
