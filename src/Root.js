@@ -47,6 +47,7 @@ class Root extends React.Component {
       });
     }
   }
+  
   handleDisplayContact(value) {
     if (value === "Contact") {
       this.setState(() => {

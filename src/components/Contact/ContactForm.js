@@ -6,7 +6,7 @@ const ContactForm = (props) => {
   return (
     <div className="formWindow">
       <div className="form">
-        <form action="/upload" method="post" enctype="multipart/form-data">
+        <form action="/upload" method="post" encType="multipart/form-data">
           <label>
             <h2>SEND US A MESSAGE</h2>
             <input type="text" name="nome" placeholder="Last Name" />
