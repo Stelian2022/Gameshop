@@ -1,13 +1,13 @@
 .contactWindow {
   display: flex;
-  justify-content: center;
-  padding-top: 2rem;
+  justify-content: right;
+  padding-top: 4rem;
   position: fixed;
 }
 .contactForm form {
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  height: 60vh;
   width: 70%;
 }
 .contactForm {
@@ -16,7 +16,7 @@
   border-radius: 5%;
   border: 1px solid #211510;
   box-shadow: 5px 5px 5px 5px;
-
+  background-color: #5d3a07;
   width: 50%;
   padding-top: 2rem;
 }

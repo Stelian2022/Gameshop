@@ -1,9 +1,9 @@
-import "./Contact.css";
-import BoutiqueContext from "../../BoutiqueContext";
+import "./Register.css";
+// import BoutiqueContext from "../../BoutiqueContext";
 import React from "react";
 
 const Contact = (props) => {
-  const boutiqueContext = React.useContext(BoutiqueContext);
+  // const boutiqueContext = React.useContext(BoutiqueContext);
   return (
     <div className="contactWindow">
       <div className="contactForm">
@@ -17,14 +17,12 @@ const Contact = (props) => {
               type="password"
               name="password"
               placeholder="Password"
-              minlength="6"
               required
             />
             <input
               type="password"
               name="password"
               placeholder="Repeat your Password"
-              minlength="6"
               required
             />
           </label>

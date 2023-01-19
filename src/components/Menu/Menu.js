@@ -1,7 +1,8 @@
 import MenuButton from "./MenuButton";
 import "./Menu.css";
 import React from "react";
-import BoutiqueContext from "../../BoutiqueContext";
+// import BoutiqueContext from "../../BoutiqueContext";
+
 
 //creer une class menuEntries qui va générer les objets
 //de mon menuComponent ci-desus :
@@ -26,10 +27,8 @@ class MenuInscription {
     this.url = url;
   }
 }
-const MenuInscriptionContent = [new MenuInscription("Sipn Up/Log In", "#")];
+const menuInscriptionContent = [new MenuInscription("Sipn Up/Log In", "#")];
 
-
-// const menuContent = [
 //   {
 //     text: "Home",
 //     url: "#",
@@ -51,19 +50,19 @@ function displayMenu() {
 }
 
 function Menu(props) {
-  const boutiqueContext = React.useContext(BoutiqueContext);
+  // const boutiqueContext = React.useContext(BoutiqueContext);
   return (
     <div className="menuHeader">
       <div className="logo">GAME SHOP</div>
       <ul className="innerMenu dNone">
         {
           /*pour appeler une boucle dans mon JSX je dois utiliser des accolades*/
-          menuContent.map((value) => {
-           
+          menuContent.map((value, i) => {
             //pour retourner a nouveau du JSX je doit dans ma function callback
             //utiliser un return
             return (
               <MenuButton
+                key={i}
                 clickDisplayFrame={props.clickDisplayFrame}
                 texte={value.text}
                 url={value.url}
@@ -79,12 +78,12 @@ function Menu(props) {
         <div className="inscription">
           {
             /*pour appeler une boucle dans mon JSX je dois utiliser des accolades*/
-            MenuInscriptionContent.map((value) => {
-              
+            menuInscriptionContent.map((value, i) => {
               //pour retourner a nouveau du JSX je doit dans ma function callback
               //utiliser un return
               return (
                 <MenuButton
+                  key={i}
                   clickDisplayFrame={props.clickDisplayFrame}
                   texte={value.text}
                   url={value.url}
@@ -97,12 +96,7 @@ function Menu(props) {
           <i className="fa-solid fa-bars"></i>
         </div>
 
-        <i
-          className="fa-solid fa-cart-shopping"
-          onClick={() => {
-            boutiqueContext.handleDisplayFrame(props.texte);
-          }}
-        ></i>
+        <i className="fa-solid fa-cart-shopping"></i>
       </div>
     </div>
   );
