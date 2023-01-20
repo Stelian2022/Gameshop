@@ -51,7 +51,7 @@ const Cart = (props) => {
                       }
                       
 
-                      <span className="qteCart">{qteDisplay}</span>
+                      <span className="qteCart"></span>
                       <span
                         className="lessCart"
                         onClick={() => boutiqueContext.remove(i, value)}

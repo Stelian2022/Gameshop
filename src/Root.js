@@ -8,6 +8,7 @@ import Cart from "./components/Cart/Cart";
 import Reseaux from "./components/Footer/Footer";
 import BoutiqueContext from "./BoutiqueContext";
 import ContactForm from "./components/Contact/ContactForm";
+
 //Component de type class simple
 class Root extends React.Component {
   constructor(props) {
@@ -20,17 +21,28 @@ class Root extends React.Component {
       cart: [],
       totalCart: 0,
       handleDisplayFrame: this.handleDisplayFrame.bind(this),
+      handleDisplayFrameIcon: this.handleDisplayFrameIcon.bind(this),
       handleDisplayRegister: this.handleDisplayRegister.bind(this),
       handleDisplayContact: this.handleDisplayContact.bind(this),
 
       achat: this.achat.bind(this),
       remove: this.remove.bind(this),
       removeAll: this.removeAll.bind(this),
+      
     };
   }
 
   handleDisplayFrame(value) {
     if (value === "Cart") {
+      this.setState(() => {
+        return {
+          displayFramesCart: !this.state.displayFramesCart,
+        };
+      });
+    }
+  }
+  handleDisplayFrameIcon(value) {
+    if (value === "") {
       this.setState(() => {
         return {
           displayFramesCart: !this.state.displayFramesCart,
@@ -121,6 +133,8 @@ class Root extends React.Component {
       };
     });
   }
+
+ 
   // garbage(i) {
   //   let cartTmp = this.state.cart;
   //   cartTmp.splice(i, 1);

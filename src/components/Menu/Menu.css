@@ -7,21 +7,16 @@
   color: black;
   font-size: 1.5rem;
   font-weight: 900;
-
 }
-.menuCart{
+.menuCart {
   display: flex;
   font-size: 2rem;
-  
 }
-.menuCart i{
-  padding: .5rem;
-
+.menuCart i {
+  padding: 0.5rem;
 }
 .menuHeader .burger {
   left: 0;
-  
-  
 }
 .innerMenu {
   display: flex;
@@ -31,6 +26,7 @@
   left: 0;
   top: 3rem;
   display: none;
+  background-color: rgb(93, 58, 7);
 }
 .innerMenu li {
   padding: 0.5rem;
@@ -42,17 +38,32 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: black;
 }
+
+.pill {
+  position: absolute;
+  background-color: #0d0707;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  right: 5rem;
+  top: 2rem;
+  border-radius: 50%;
+}
 .innerMenu a:visited {
   color: black;
 }
 .innerMenu a:hover {
   color: green;
 }
-.inscription{
+.inscription {
   list-style-type: none;
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 1rem;
+  font-size: 1rem;
 }
 .inscription a:visited {
   color: black;
@@ -68,7 +79,6 @@ font-size: 1rem;
   height: 60px;
   box-shadow: 15px 1px 15px 5px rgb(73, 69, 69);
   background-color: rgb(93, 58, 7);
- 
 }
 .dNone {
   display: none;
@@ -86,6 +96,21 @@ font-size: 1rem;
     flex-direction: row;
     position: static;
     justify-content: center;
+    background-color: rgb(93, 58, 7);
+  }
+  .pill {
+    position: absolute;
+    background-color: #0d0707;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    right: 2rem;
+    top: 2.5rem;
+    border-radius: 50%;
   }
 
   .burger i {

@@ -1,8 +1,7 @@
 import MenuButton from "./MenuButton";
 import "./Menu.css";
 import React from "react";
-import "../Card/PillButton.css";
-import BoutiqueContext from "../../BoutiqueContext";
+
 
 
 //creer une class menuEntries qui va générer les objets
@@ -30,7 +29,7 @@ class MenuInscription {
 }
 const menuInscriptionContent = [
   new MenuInscription("Sipn Up/Log In", "#"),
-  ];
+  new MenuInscription("", "#")];
 
 function displayMenu() {
   document.querySelector(".innerMenu").classList.toggle("dNone");
@@ -40,7 +39,7 @@ function displayMenu() {
 }
 
 function Menu(props) {
-  const boutiqueContext = React.useContext(BoutiqueContext);
+  
   return (
     <div className="menuHeader">
       <div className="logo">GAME SHOP</div>
@@ -85,11 +84,7 @@ function Menu(props) {
         <div className="burger" onClick={displayMenu}>
           <i className="fa-solid fa-bars"></i>
         </div>
-        <button className="button"></button>
-        <i
-          className="fa-solid fa-cart-shopping"
-        
-        ></i>
+
       </div>
     </div>
   );
