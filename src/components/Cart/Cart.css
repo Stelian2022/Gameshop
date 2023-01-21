@@ -1,18 +1,27 @@
+*{
+  font-weight: 700;
+}
 .backCart {
-  width: 100vw;
+  width: 90vw;
   height: 80vh;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
-  background-color: #23252b;
+  background-color: rgba(64, 207, 56, 0.8);
+  /* background-color: #23252b; */
   padding-top: 5rem;
-  color: white;
+  color: black;
+ 
 }
 
+.removeCart{
+  position: absolute;
+  right: 0;
+}
 .backCart h3 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .totalCart {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding-left: 2rem;
 }
 
 .backCart li {
@@ -39,16 +48,36 @@
 }
 .lessCart {
   cursor: pointer;
+  
+  /* background-color: #5D3A07; */
+  margin-left: 1rem;
+}
+.moreLess{
+  margin-left: 2rem;
+ 
+}
+.moreCart, .lessCart{
+  
+
+  border-radius: 50%;
+  /* background-color: #5D3A07; */
+  color: orange;
+
+  height: 10px;
 }
 .moreCart {
+margin-right: 1rem;
   cursor: pointer;
+
 }
 .achatCart {
-  width: 200px;
+  width: 300px;
   height: 50px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: orange;
   background-color: #5d3a07;
+ 
+
 }
 .achat {
   position: absolute;

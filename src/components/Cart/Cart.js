@@ -34,8 +34,8 @@ const Cart = (props) => {
                 qteTmp = 0;
                 return (
                   <li key={i}>
-                    <span className="name">{article.name}</span>
-                    <span>
+                    <span className="name">{article.name}
+                    <span className="moreLess">
                       {boutiqueContext.data[value].qte > 0 ? (
                         <span
                           className="moreCart"
@@ -51,16 +51,18 @@ const Cart = (props) => {
                       }
                       
 
-                      <span className="qteCart"></span>
+                      <span className="qteCart">{qteDisplay}</span>
                       <span
                         className="lessCart"
                         onClick={() => boutiqueContext.remove(i, value)}
                       >
                         -
                       </span>
-                      <span className="priceCart">{article.price}€ TTC</span>
+                    </span>
+                  
+                      
                       <span className="removeCart" 
-                      onClick ={() => boutiqueContext.removeAll(value)} > 
+                      onClick ={() => boutiqueContext.removeAll(value)} > <span className="priceCart">{article.price}€ TTC</span>
                         <i className="fa-solid fa-trash-can" ></i>
                       </span>
                     </span>
@@ -76,8 +78,8 @@ const Cart = (props) => {
           </ul>
 
           <div className="achat">
-            <button className="achatCart">Acheter</button>
-            <span className="totalCart" >{boutiqueContext.totalCart} € TTC </span>
+            <button className="achatCart">Acheter <span className="totalCart" >{boutiqueContext.totalCart} € TTC </span> </button>
+            
           </div>
         </div>
       </div>

@@ -57,6 +57,7 @@
   padding-top: 2rem;
   display: flex;
   justify-content: center;
+  width: 90%;
 }
 .submit input {
   background-color: #9f1600;
@@ -64,7 +65,7 @@
   font-weight: 900;
   font-size: 1.5rem;
 
-  width: 100%;
+ 
 }
 @media screen and (max-width: 576px) {
   .contactForm {

@@ -1,9 +1,10 @@
-* {
+* { 
     margin: 0;
     padding: 0;
   }
   .cardFrame img {
     width: 100%;
+    cursor: pointer;
   }
   .cardFrame>div{
       width: 40%;

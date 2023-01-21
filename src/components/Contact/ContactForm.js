@@ -1,10 +1,18 @@
-// import BoutiqueContext from "../../BoutiqueContext";
+import BoutiqueContext from "../../BoutiqueContext";
 import React from "react";
 import "./ContactForm.css";
 const ContactForm = (props) => {
-//   const boutiqueContext = React.useContext(BoutiqueContext);
+  const boutiqueContext = React.useContext(BoutiqueContext);
   return (
     <div className="formWindow">
+      <div
+        className="closeCart "
+        onClick={() => {
+          boutiqueContext.handleDisplayContact("Contact");
+        }}
+      >
+        X
+      </div>
       <div className="form">
         <form action="/upload" method="post" encType="multipart/form-data">
           <label>

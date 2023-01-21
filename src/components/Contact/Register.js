@@ -1,11 +1,19 @@
 import "./Register.css";
-// import BoutiqueContext from "../../BoutiqueContext";
+import BoutiqueContext from "../../BoutiqueContext";
 import React from "react";
 
 const Contact = (props) => {
-  // const boutiqueContext = React.useContext(BoutiqueContext);
+  const boutiqueContext = React.useContext(BoutiqueContext);
   return (
     <div className="contactWindow">
+      <div
+        className="closeCart "
+        onClick={() => {
+          boutiqueContext.handleDisplayRegister("Sipn Up/Log In");
+        }}
+      >
+        X
+      </div>
       <div className="contactForm">
         <form>
           <label>
