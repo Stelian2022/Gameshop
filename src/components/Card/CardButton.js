@@ -11,7 +11,7 @@ function CardButton(props) {
       <button 
    
     
-    onClick={() => boutiqueContext.achat(props.id)}>Buy <i class="fa-solid fa-cart-plus"></i></button>
+    onClick={() => boutiqueContext.achat(props.id)}>Buy <i className="fa-solid fa-cart-plus"></i></button>
     )
     
   }else{

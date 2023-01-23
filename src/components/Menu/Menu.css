@@ -53,6 +53,7 @@
   top: 2rem;
   border-radius: 50%;
   cursor: pointer;
+  position: fixed;
 }
 .innerMenu a:visited {
   color: black;
